@@ -24,7 +24,7 @@ let isAdmin;
 // Assign your name as the value of `name`.
 name = "Chandan";
 // Assign the value of `name` to `newUser`.
-newUser = "Chandan";
+newUser = "name";
 // Set the value of `isAdmin` to `true`.
 isAdmin = true;
 // Alert the values of all the three variables.
