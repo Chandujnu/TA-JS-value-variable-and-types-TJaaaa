@@ -20,7 +20,7 @@ let language;
 language = "JavaScript";
 alert("I am learning " + language);
 alert(`The value of num1 is  ${num1} and the value of num2 is  ${num2}`);
-alert(`The sum of ${num1} and ${num2} is ${num1 + num2}`);
+alert(`The sum of num1 and num2 is ${num1 + num2}`);
 
 /*
 2. Do the following using `alert`, `prompt` and `confirm` and `console`
@@ -37,12 +37,9 @@ alert(`The sum of ${num1} and ${num2} is ${num1 + num2}`);
     Adult: [isAdult]
     Profession: [userProfession]` (it should be in three different lines)
 */
-// prompt("What is your name?");
 let userName = prompt("What is your name?");
-// prompt("What is your profession?");
 let userProfession = prompt("What is your profession?");
-confirm("Are you adult?");
-let isAdult = true;
+let isAdult = confirm("Are you adult?");
 alert(`I am ${userName} a ${userProfession}`);
 console.log(`I am ${userName} a ${userProfession}`);
 alert(`Username: ${userName} \nAdult: ${isAdult} \nProfession: ${userProfession}`);
