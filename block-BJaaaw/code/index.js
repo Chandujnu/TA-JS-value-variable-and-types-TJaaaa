@@ -7,7 +7,7 @@
   - `if` the number is odd print the message "number is odd"
 */
 let num = Number(prompt("Enter a number!"));
-if(num / 2 == 0 || num == 2) {
+if(num % 2 == 0) {
   alert("the number is even");
 }
 else {
@@ -36,9 +36,9 @@ let numOne = Number(prompt("Enter first number!")), numTwo = Number(prompt("Ente
   - `else` print the message " All men must die"
 */
 let houseName = prompt("What is your house name?");
-if(houseName === "stark") {
+if (houseName === "stark") {
   alert("Winter is coming");
-} else if(houseName === "lannister") {
+} else if (houseName === "lannister") {
   alert("A lannister always pays his debt");
 } else {
   alert("All men must die");
@@ -46,8 +46,7 @@ if(houseName === "stark") {
 
 
 // 5. Convert the above code using`?` terniary operator
-let houseName = prompt("What is your house name?");
-houseName ? houseName === alert("stark") : alert
+houseName === "stark" ? alert("Winter is coming") : houseName === "lannister" ? alert("A lannister always pays his debt") : alert("All men must die")
 
 // Switch
 
@@ -102,18 +101,18 @@ switch(month) {
 
 */
 let salary = Number(prompt("Enter your salary amount!"));
-switch(salary) {
+switch(true) {
   case salary <= 20000:
-    alert("The in-hand amount" + " " + (salary - salary * (10 / 100)));
+    alert(`The in-hand amount  ${salary - salary * (10 / 100)}`);
     break;
   case salary <= 40000:
-    alert("The in-hand amount" + " " + (salary - salary * (20 / 100)));
+    alert(`The in-hand amount  ${salary - salary * (20 / 100)}`);
     break;
   case salary <= 50000:
-    alert("The in-hand amount" + " " + (salary - salary * (30 / 100)));
+    alert(`The in-hand amount  ${salary - salary * (30 / 100)}`);
     break;
   default:
-    alert("Match not found")
+    alert("Match not found");
 }
 //  if..else vs switch
 
@@ -127,7 +126,36 @@ Implement the condition given below using`if..else` and`switch` statement.
   - `marks > 0` alert`"Grade D"`
 
 */
+let marks = Number(prompt("Enter your marks"));
 
+if (marks > 100) {
+  alert("Marks can't be greater than 100");
+} else if (marks > 80 && marks < 100) {
+  alert("Grade A");
+} else if (marks > 50 && marks < 80) {
+  alert("Grade B");
+} else if (marks > 30 && marks < 50) {
+  alert("Grade C")
+} else {
+  alert("Grade D")
+}
+
+switch(true) {
+  case marks > 100:
+    alert("Marks can't be greater than 100")
+    break;
+  case marks > 80 && marks < 100:
+    alert("Grade A")
+    break;
+  case marks > 50 && marks < 80:
+    alert("Grade B")
+    break;
+  case marks > 30 && marks < 50:
+    alert("Grade C")
+    break;
+  default:
+    alert("Grade D")
+}
 
 /* 9. Weather app
 
@@ -140,16 +168,16 @@ Implement the condition given below using`if..else` and`switch` statement.
 */
 let weather = prompt("What is the weather like outside?");
 switch(weather) {
-  case sunny:
+  case "sunny":
     alert("Wear a T-shirt!")
     break;
-  case rainy:
+  case "rainy":
     alert("Don't forget to take your raincoat!")
     break;
-  case hot:
+  case "hot":
     alert("Get a hanky!")
     break;
-  case freezing:
+  case "freezing":
     alert("Get your sweeter on!")
     break;
   default:
