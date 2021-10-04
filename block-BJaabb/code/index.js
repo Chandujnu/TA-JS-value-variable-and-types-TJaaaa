@@ -12,14 +12,14 @@ userName = user;
 console.log(userName);
 
 let age = 21; isLearning = true;
-userName = "John";
-console.log(user);
+user = "John";
+console.log(user, userName);
 
 /* 2.
 Use `prompt` to take two numbers from user and store it in variable `numA` and `numB`. Create a third variable called `sum`, using `+` operator add numA and numB , store it in varible `sum` and using alert display `sum` in browser.
 */
-let numA = Number(prompt("Enter numA"));
-let numB = Number(prompt("Enter numB"));
+let numA = +(prompt("Enter numA"));
+let numB = +(prompt("Enter numB"));
 let sum = (numA + numB);
 alert(sum);
 
@@ -42,16 +42,27 @@ for(let i = 9; i >= 0; i = i - 1) {
 }
 
 // 5. Concat all the numbers from 5 to 0 (both inclusive) in descending order using a while loop. (543210)
-for(let i = 5; i >= 0; i = i -1) {
-    console.log(i);
+let finalString = "";
+let initialValue = 5;
+
+while (initialValue >= 0) {
+    finalString += initialValue;
+    initialValue--;
 }
 
+console.log(finalString);
+
 // 6. Concat all the even numbers from 10 to 0 (both inclusive) in descending order using a while loop. (1086420)
-for(let i = 10; i >= 0; i = i - 1) {
-    if (i % 2 ==0) {
-        console.log(i);
-    }
+let finalEvenString = "";
+let initialEvenValue = 10;
+
+while (initialEvenValue >= 0) {
+    if (initialEvenValue % 2 == 0)
+    finalEvenString += initialEvenValue;
+    initialEvenValue--;
 }
+
+console.log(finalEvenString);
 // Comparisoin
 
 /* 7. Take two value using prompt and store them in variables `num1` and `num2`. Check whether they are equal or not.
@@ -65,6 +76,11 @@ Example:
 "hello", -21; // false
 
 */
-let numA = Number(prompt("Enter numA"));
-let numB = Number(prompt("Enter numB"));
-num(true) ? let equal = (numA = numB) ? true:false
+let num1 = Number(prompt("Enter num one"));
+let num2 = Number(prompt("Enter num two"));
+
+if (isNaN(num1) || isNaN(num2)) {
+    alert("Enter a valid input!")
+} else {
+    alert(num1 == num2);
+}
