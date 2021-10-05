@@ -10,6 +10,21 @@ Write a program that asks the user his/her age and check for the following condi
 - `if` the age is greater than 55 then print the message " You are too old to participate in the marthon".
 👇
 */
+let age = +prompt("Enter your age");
+
+switch(true) {
+  case age <= 55:
+    alert("You can participate in the marathon.")
+    break;
+  case age <= 11:
+    alert("You are too young to participate in the marathon.")
+    break;
+  case age < 4:
+    alert("Hey Kiddo! Can You Walk?")
+    break;
+  default:
+    alert("You are too old to participate in the marathon.")
+}
 
 // Loops
 /*
@@ -20,12 +35,18 @@ n = 1 => output: hello
 n = 7 => output: heeeeeeello
 👇
 */
+
 // [Your code goes here]
 
 /*
 Program to calculate the sum of first n natural numbers(1,2,3...n are known as natural numbers). Prompt user to enter n (using `prompt`) then based on input provided calculate and show result in `alert`.
 👇
 */
+let n = +prompt("Enter the value of n");
+for (n = 0; n >=0; n = n+1) {
+  sum = n+1;
+  alert(sum);
+}
 // [Your code goes here]
 
 /* Switch Statement
@@ -45,6 +66,38 @@ Take a number value from user and alert the message if it matches the conditions
 * [ ] PLEASE TRY AGAIN, if  is none of the above.
 
 */
+let number = +prompt("Enter a number");
+switch(number) {
+  case 1:
+    alert("One")
+    break;
+  case 2:
+      alert("Two")
+      break;
+  case 3:
+    alert("Three")
+    break;
+  case 4:
+    alert("Four")
+    break;
+  case 5:
+    alert("Five")
+    break;
+  case 6:
+    alert("Six")
+    break;
+  case 7:
+    alert("Seven")
+    break;
+  case 8:
+    alert("Eight")
+    break;
+  case 9:
+    alert("Nine")
+    break;
+  default:
+    alert("PLEASE TRY AGAIN") 
+}
 // [Your code goes here]
 
 /*
@@ -60,12 +113,46 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 * [ ] `DD` if `marks` is greater than 30 and less than or equal to 40
 * [ ] `FF` if `marks` is less than or equal to 30
 */
-
+let marks = +prompt("Enter your marks");
+switch(true) {
+  case marks > 90:
+    alert(`"AA" grade`)
+    break;
+  case marks > 80 && marks <= 90:
+    alert(`"AB" grade`)
+    break;
+  case marks > 70 && marks <= 80:
+    alert(`"BB" grade`)
+    break;
+  case marks > 60 && marks <= 70:
+    alert(`"BC" grade`)
+    break;
+  case marks > 50 && marks <=60:
+    alert(`"CC" grade`)
+    break;
+  case marks > 40 && marks <= 50:
+    alert(`"CD" grade`)
+    break;
+  case marks > 30 && marks <= 40:
+    alert(`"DD" grade`)
+    break;
+  default:
+    alert(`"FF" grade`)
+}
 // [Your code goes here]
 
 /*
  🎖Write a JavaScript program that takes two `integers` from user (using prompt) and alerts the larger number.
 */
+let integerA = +prompt("Enter first integer");
+let integerB = +prompt("Enter second integer");
+if (integerA > integerB) {
+  alert("First integer is greater!")
+} else if(integerA === integerB) {
+  alert("Both integers are equal!")
+} else {
+  alert("Second integer is greater")
+}
 // [your code goes here]
 
 /*
@@ -84,5 +171,7 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
     * [ ] Mul
     * [ ] Div
 */
+let num1 = +prompt("Enter num1");
+let num2 = +prompt("Enter num2");
 
 // [Your code goes here]
