@@ -13,10 +13,10 @@ Write a program that asks the user his/her age and check for the following condi
 let age = +prompt("Enter your age");
 
 switch(true) {
-  case age <= 55:
+  case age >= 12 && age <= 55:
     alert("You can participate in the marathon.")
     break;
-  case age <= 11:
+  case age >= 4 && age <= 11:
     alert("You are too young to participate in the marathon.")
     break;
   case age < 4:
@@ -35,6 +35,18 @@ n = 1 => output: hello
 n = 7 => output: heeeeeeello
 👇
 */
+let count = +prompt("Enter the number of e!");
+
+const start ="h";
+const end = "llo"
+
+let middle = "";
+
+for (let i = 0; i < count; i++) {
+  middle += "e";
+}
+
+alert(start + middle + end);
 
 // [Your code goes here]
 
@@ -43,10 +55,14 @@ Program to calculate the sum of first n natural numbers(1,2,3...n are known as n
 👇
 */
 let n = +prompt("Enter the value of n");
-for (n = 0; n >=0; n = n+1) {
-  sum = n+1;
-  alert(sum);
+
+let sum = 0;
+for (let i = 1; i <= n; i++) {
+  sum += i;
 }
+ 
+alert(`The value of sum id ${sum}`)
+
 // [Your code goes here]
 
 /* Switch Statement
@@ -66,7 +82,7 @@ Take a number value from user and alert the message if it matches the conditions
 * [ ] PLEASE TRY AGAIN, if  is none of the above.
 
 */
-let number = +prompt("Enter a number");
+let number = +prompt("Enter a number between 1-10");
 switch(number) {
   case 1:
     alert("One")
@@ -158,6 +174,17 @@ if (integerA > integerB) {
 /*
 🎖Write a JavaScript conditional statement to find the sign (+, -) of product of three numbers. Take those three numbers from user using `prompt`. Display an alert box with the specified sign.
 */
+const numOne = +prompt("Enter first number");
+const numTwo = +prompt("Enter second number");
+const numThree = +prompt("Enter third number");
+
+let product = numOne * numTwo * numThree;
+
+if (product > 0) {
+  alert(`The final value is positive`);
+} else { 
+  alert(`The final value is negative`);
+}
 // [Your code goes here]
 
 /* Calculator
@@ -173,5 +200,23 @@ if (integerA > integerB) {
 */
 let num1 = +prompt("Enter num1");
 let num2 = +prompt("Enter num2");
+let operaton = prompt("Enter an operaton (Add, Sub, Mult, Div)");
 
+switch(operaton) {
+  case "Add":
+    alert(`The sum of ${num1} and ${num2} is ${num1 + num2}`);
+    break;
+  case "Sub":
+    alert(`The substract of ${num1} and ${num2} is ${num1 - num2}`);
+    break;
+  case "mult":
+    alert(`The multiple of ${num1} and ${num2} is ${num1 * num2}`);
+    break;
+  case "Div":
+    alert(`The division of ${num1} and ${num2} is ${num1 / num2}`);
+    break;
+
+  default:
+    alert(`Enter a valid input`)
+}
 // [Your code goes here]
